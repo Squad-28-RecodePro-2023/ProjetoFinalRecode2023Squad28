@@ -112,6 +112,12 @@ section,
   position: relative;
 }
 
+#sec_map,
+.section-padding {
+  padding: 0px 0;
+  position: relative;
+}
+
 .no-padding {
   padding: 0;
 }
