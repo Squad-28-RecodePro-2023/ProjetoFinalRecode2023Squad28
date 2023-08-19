@@ -257,59 +257,57 @@
     <!-- Header final -->
 
     <section id="sec_map">
-      <div class="container">
-        <div class="container">
-          <div class="row text-center mt-5">
-            <div class="col-12">
-              <h2 class="section-title">Chegando a nossa sede</h2>
-              <h3 class="section-sub-title m-0 p-0" style="color: #400036;">Encontre nossa localização</h3>
-            </div>
+      <div class="container justify-content-center">
+        <div class="row text-center mt-5">
+          <div class="col-12">
+            <h2 class="section-title">Chegando a nossa sede</h2>
+            <h3 class="section-sub-title m-0 p-0" style="color: #400036;">Encontre nossa localização</h3>
           </div>
-          <div class="container-fluid m-5">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d914.2980810149854!2d-46.657497724317764!3d-23.561535165958748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59ceb433f9f5%3A0x48e239a207d5591c!2sAv.%20Paulista%2C%201520-1542%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-200!5e0!3m2!1spt-BR!2sbr!4v1692398387417!5m2!1spt-BR!2sbr"
-              stylesheet width="100%" height="450" style="border: 5px solid #400036; border-radius: 15px;"
-              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <div class="gap-40"></div>
-          <div class="row">
-            <div class="col-md-12">
-              <h3 class="column-title" style="color: #400036;">Deixe sua mensagem</h3>
-              <form id="contact-form" action="#" method="post" role="form">
-                <div class="error-container"></div>
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label class="font-weight-bold" style="color: #FF81D0;">Nome</label>
-                      <input class="form-control form-control-name" name="name" id="name"
-                        placeholder="digite seu nome ..." type="text" required>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label class="font-weight-bold" style="color: #FF81D0;">Email</label>
-                      <input class="form-control form-control-email" name="email" id="email"
-                        placeholder="digite seu email..." type="email" required>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label class="font-weight-bold" style="color: #FF81D0;">Assunto</label>
-                      <input class="form-control form-control-subject" name="subject" id="subject"
-                        placeholder="digite do que se trata ..." required>
-                    </div>
+        </div>
+        <div class="container p-3 justify-content-center">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d914.2980810149854!2d-46.657497724317764!3d-23.561535165958748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59ceb433f9f5%3A0x48e239a207d5591c!2sAv.%20Paulista%2C%201520-1542%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-200!5e0!3m2!1spt-BR!2sbr!4v1692398387417!5m2!1spt-BR!2sbr"
+            stylesheet width="100%" height="450" style="border: 5px solid #400036; border-radius: 15px;"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="gap-40"></div>
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="column-title" style="color: #400036;">Deixe sua mensagem</h3>
+            <form id="contact-form" action="#" method="post" role="form">
+              <div class="error-container"></div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="font-weight-bold" style="color: #FF81D0;">Nome</label>
+                    <input class="form-control form-control-name" name="name" id="name"
+                      placeholder="digite seu nome ..." type="text" required>
                   </div>
                 </div>
-                <div class="form-group">
-                  <label class="font-weight-bold" style="color: #FF81D0;">Mensagem</label>
-                  <textarea class="form-control form-control-message" name="message" id="message"
-                    placeholder="digite sua mensagem..." rows="10" required></textarea>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="font-weight-bold" style="color: #FF81D0;">Email</label>
+                    <input class="form-control form-control-email" name="email" id="email"
+                      placeholder="digite seu email..." type="email" required>
+                  </div>
                 </div>
-                <div class="text-right mb-5"><br>
-                  <button class="btn btn-primary solid blank" type="submit">Enviar Mensagem</button>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="font-weight-bold" style="color: #FF81D0;">Assunto</label>
+                    <input class="form-control form-control-subject" name="subject" id="subject"
+                      placeholder="digite do que se trata ..." required>
+                  </div>
                 </div>
-              </form>
-            </div>
+              </div>
+              <div class="form-group">
+                <label class="font-weight-bold" style="color: #FF81D0;">Mensagem</label>
+                <textarea class="form-control form-control-message" name="message" id="message"
+                  placeholder="digite sua mensagem..." rows="10" required></textarea>
+              </div>
+              <div class="text-right mb-5"><br>
+                <button class="btn btn-primary solid blank" type="submit">Enviar Mensagem</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
