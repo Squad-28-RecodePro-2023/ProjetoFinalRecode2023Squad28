@@ -187,7 +187,7 @@
         </div><!-- Container fim -->
       </div>
 
-      <div class="site-navigation">
+      <div class="site-navigation" style="display: flex; align-items: center; height: 50px;">
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
@@ -231,21 +231,22 @@
                   </ul>
                 </div>
               </nav>
-            </div>
-            <!-- Col final -->
-          </div>
-          <!-- Row final -->
+            </div><!-- Col final -->
+          </div><!-- Row final -->
 
-          <div class="nav-search" style="background-color: #4036;">
+          <div class="nav-search"
+            style="background-color: #4036; position: absolute; top: 50%; transform: translateY(-50%);">
             <span id="search"><i class="fa fa-search"></i></span>
           </div><!-- pesquisa final -->
 
           <div class="search-block" style="display: none; background-color: #4036; border-radius: 50px;">
             <label for="search-field" class="w-100 mb-0">
-              <input type="text" class="form-control" style="background-color: white; border-radius: 50px; color: #400036;"
-                id="search-field" placeholder="Pesquise">
+              <input type="text" class="form-control"
+                style="background-color: white; border-radius: 50px; color: #400036;" id="search-field"
+                placeholder="Pesquise">
             </label>
-            <span class="search-close">&times;</span>
+            <span class="search-close"
+              style="position: absolute; top: -65%; transform: translateY(-50%);">&times;</span>
           </div><!-- final da caixa de pesquisa -->
         </div>
         <!-- Container final -->
@@ -255,9 +256,100 @@
     </header>
     <!-- Header final -->
 
-    <section>
-      <div class="container-fluid">    <!-- section em andamento -->
-        <img src="images/imagesomos.png" class="img-fluid" alt="Imagem responsiva">
+    <section
+      style="background-image: url(images/QuemSomos/backGroudSomos.png); background-size: cover; background-position: center; width: 100%; min-height: 720px;">
+      <div class="container">
+        <div class="col mx-2">
+          <div class="row">
+            <h2>
+              <span style="color: #400036; text-shadow: 3px 3px 5px rgba(255, 255, 255, 1);">Beauty Academy -
+                Fortalecendo
+                Vozes, Rumo à Grandeza e Autodeterminação...</span>
+            </h2>
+          </div>
+          <div class="row">
+            <h1 style="margin-top: 50px; color: #400036; text-shadow: 3px 3px 5px rgba(255, 255, 255, 1);">
+              Bem-vindo à Beauty Academy!
+            </h1>
+          </div>
+          <div class="row">
+            <p style="color: #400036; text-shadow: 3px 3px 5px rgba(255, 255, 255, 1);"><strong>______</strong></p>
+          </div>
+          <div class="row">
+
+            <div class="container mt-5" style="min-height: 300px;">
+              <!-- Slide de texto -->
+              <div id="textCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <h3 class="vertical-text" style="color: #400036;">Nossa missão é clara: capacitar e transformar vidas. Através de uma
+                      abordagem comprometida com a qualidade, estamos dedicados a fornecer cursos que transcendem
+                      barreiras econômicas. Buscamos incansavelmente a capacitação das pessoas, oferecendo oportunidades
+                      de aprendizado que impulsionam a confiança e a autoestima.</h3>
+                  </div>
+                  <div class="carousel-item">
+                    <h3 class="vertical-text" style="color: #400036;">Com um coração voltado para a inclusão social, nossos cursos são
+                      projetados para alcançar aqueles de baixa renda, que muitas vezes são privados do acesso à
+                      educação. Acreditamos que cada indivíduo merece a chance de desenvolver suas habilidades e
+                      potencial. Ao promover a educação gratuita, estamos construindo alicerces para um futuro mais
+                      brilhante e equitativo.</h3>
+                  </div>
+                  <div class="carousel-item">
+                    <h3 class="vertical-text" style="color: #400036;">Na Beauty Academy, não apenas transmitimos conhecimento, mas também
+                      nutrimos sonhos. Com um olhar atento para a empregabilidade, nossos cursos não apenas capacitam,
+                      mas também preparam nossos alunos para trilharem caminhos profissionais promissores e
+                      independentes. Junte-se a nós em uma jornada de crescimento, igualdade e sucesso, onde cada etapa
+                      é um passo em direção a um horizonte repleto de realizações.</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container mt-4">
+              <div class="row justify-content-center">
+                <div class="radio-buttons-container">
+                  <div class="radio-button">
+                    <input name="radio-group" id="radio1" data-bs-target="#textCarousel" data-bs-slide-to="0"
+                      class="radio-button__input active mx-1" type="radio" style="transition: background-color 0.3s;">
+
+                    <style>
+                      #radio1:hover {
+                        background-color: #400036;
+                        /* Cor de fundo ao passar o mouse */
+                        border-radius: 50%;
+                      }
+                    </style>
+                  </div>
+                  <div class="radio-button">
+                    <input name="radio-group" id="radio2" data-bs-target="#textCarousel" data-bs-slide-to="1"
+                      class="radio-button__input mx-1" type="radio" style="transition: background-color 0.3s;">
+
+                    <style>
+                      #radio2:hover {
+                        background-color: #400036;
+                        /* Cor de fundo ao passar o mouse */
+                        border-radius: 50%;
+                      }
+                    </style>
+                  </div>
+                  <div class="radio-button">
+                    <input name="radio-group" id="radio3" data-bs-target="#textCarousel" data-bs-slide-to="2"
+                      class="radio-button__input mx-1" type="radio" style="transition: background-color 0.3s;">
+
+                    <style>
+                      #radio3:hover {
+                        background-color: #400036;
+                        /* Cor de fundo ao passar o mouse */
+                        border-radius: 50%;
+                      }
+                    </style>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
     </section>
 
@@ -266,7 +358,8 @@
         <div class="container">
           <div class="row justify-content-between">
             <div class="col-lg-4 col-md-6 footer-widget footer-about">
-              <h3 class="widget-title"><a href="QuemSomos.html" style="text-decoration: none; color: inherit;">Quem Somos? </a></h3>
+              <h3 class="widget-title"><a href="QuemSomos.html" style="text-decoration: none; color: inherit;">Quem
+                  Somos? </a></h3>
               <img loading="lazy" width="200px" class="footer-logo" src="images/Beauty-Elegant  Logo (1).png"
                 alt="Beauty-Academy">
             </div>

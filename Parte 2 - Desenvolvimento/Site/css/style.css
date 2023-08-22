@@ -1795,3 +1795,8 @@ img.testimonial-thumb {
   color: #fff;
 }
 
+.radio-buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
