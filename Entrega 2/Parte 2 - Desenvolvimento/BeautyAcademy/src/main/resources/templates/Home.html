@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+  <title>Beauty Academy</title>
+
+  <link rel="ícone de atalho" href="images/favicon-icone.ico" type="image/x-icon">
+
+  <link rel="icon" href="images/favicon-icone.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+
+  <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+
+  <link rel="stylesheet" href="plugins/animate-css/animate.css">
+
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+
+  <link rel="stylesheet" href="plugins/colorbox/colorbox.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https: //fonts.googleapis.com/css2?family= Koulen & display=swap" rel=" stylesheet">
+
+</head>
+
+<body>
+  <div class="body-inner">
+
+    <div id="top-bar" class="top-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-8">
+            <ul class="top-info text-center text-md-left">
+              <li><i class="fas fa-map-marker-alt"></i>
+                <p class="info-text">São Paulo capital, SP</p>
+              </li>
+            </ul>
+          </div>
+          <!-- Informação topo final -->
+
+          <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
+            <ul class="list-unstyled">
+              <li>
+                <a title="Facebook" href="">
+                  <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
+                </a>
+                <a title="Twitter" href="">
+                  <span class="social-icon"><i class="fab fa-twitter"></i></span>
+                </a>
+                <a title="Instagram" href="">
+                  <span class="social-icon"><i class="fab fa-instagram"></i></span>
+                </a>
+                <a title="youtube" href="">
+                  <span class="social-icon"><i class="fab fa-youtube"></i></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- icones redes sociais final -->
+        </div>
+        <!-- conteudo row fim -->
+      </div>
+      <!-- Container fim -->
+    </div>
+    <!-- barra sup fim -->
+    <!-- Header inicio -->
+    <header id="header" class="header-one">
+      <div class="bg-white">
+        <div class="container">
+          <div class="logo-area">
+            <div class="row align-items-center">
+              <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
+                <a class="d-block" href="Home.html">
+                  <img loading="lazy" src="images/LogoNova.jpg" alt="Beauty-Academy" style="height: 60px" ;>
+                </a>
+              </div><!-- logo fim -->
+
+              <div class="col-lg-9 header-right">
+                <ul class="top-info-box">
+                  <li>
+                    <div class="info-box">
+                      <div class="info-box-content">
+                        <p class="info-box-title">Central de atendimento</p>
+                        <p class="info-box-subtitle">(11) 847-291-4353</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="info-box">
+                      <div class="info-box-content">
+                        <p class="info-box-title">Email </p>
+                        <p class="info-box-subtitle">Beauty@Beauty.com</p>
+                      </div>
+                    </div>
+                  </li> <!-- Botão Cadastre-se -->
+                  <li class="header-get-a-quote">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#loginModal"
+                      style="background-color: #400036; color: white;">
+                      Cadastre-se / Login
+                    </button><!-- Fim do Botão Cadastre-se -->
+
+                    <!-- Modal de Login -->
+                    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                      aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel" style="color: #400036;">Login</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                              <div class="mb-3">
+                                <label for="loginEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="loginEmail" placeholder="Digite seu email">
+                              </div>
+                              <div class="mb-3">
+                                <label for="loginSenha" class="form-label">Senha</label>
+                                <input type="password" class="form-control" id="loginSenha"
+                                  placeholder="Digite sua senha">
+                              </div>
+                              <div class="d-flex justify-content-between mb-3">
+                                <button type="button" class="btn btn-primary"
+                                  style="background-color: #400036; color: white;">Login</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                                  data-bs-target="#cadastroModal">
+                                  Cadastrar
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- Fim do Modal de Login -->
+
+                    <!-- Modal de Cadastro -->
+                    <div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                      aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel" style="color: #400036;">Cadastro</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                              <div class="mb-3">
+                                <label for="nome" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+                              </div>
+                              <div class="mb-3">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+                              </div>
+                              <div class="mb-3">
+                                <label for="celular" class="form-label">Celular</label>
+                                <input type="text" class="form-control" id="celular" placeholder="Digite seu celular">
+                              </div>
+                              <div class="mb-3">
+                                <label for="senha" class="form-label">Senha</label>
+                                <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
+                              </div>
+                              <button type="submit" class="btn btn-primary">Cadastrar</button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- fim Modal de Cadastro -->
+                </ul><!-- Ul fim -->
+              </div><!-- header direita fim -->
+            </div><!-- logo area fim -->
+
+          </div><!-- Row fim -->
+        </div><!-- Container fim -->
+      </div>
+
+      <div class="site-navigation" style="display: flex; align-items: center; height: auto;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                <button class="navbar-toggler m-2" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                  aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div id="navbar-collapse" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+
+                    <li class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Cursos <i
+                          class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Estética Facial </a></li>
+                        <li><a href="#">Massoterapia e Relaxamento </a></li>
+                        <li><a href="#">Curso de Micropigmentação de Sobrancelhas </a></li>
+                        <li><a href="#">
+                            Curso de Terapias Holísticas e Aromaterapia</a></li>
+                        <li><a href="#">Curso de Estética Corporal e Tratamentos Anti-Celulite</a></li>
+                        <li><a href="#">Curso de Maquiagem Profissional para Eventos</a></li>
+                        <li><a href="#">Curso de Terapia Capilar e Tratamentos para Cabelo e Couro Cabeludo</a></li>
+                        <li><a href="#">Curso de Estética Avançada em Radiofrequência e Laser</a></li>
+                        <li><a href="#">Curso de Design de Unhas e Nail Art</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">institucional <i
+                          class="fa fa-angle-down"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="QuemSomos.html">Quem Somos? </a></li>
+                        <li><a href="Manifesto.html">Manifesto </a></li>
+                      </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="Contato.html">Contato</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div><!-- Col final -->
+          </div><!-- Row final -->
+
+          <div class="nav-search" style="background-color: #4036; position: absolute;">
+            <span id="search"><i class="fa fa-search"></i></span>
+          </div><!-- pesquisa final -->
+
+          <div class="search-block" style="display: none; background-color: #4036; border-radius: 50px;">
+            <label for="search-field" class="w-100 mb-0">
+              <input type="text" class="form-control"
+                style="background-color: white; border-radius: 50px; color: #400036;" id="search-field"
+                placeholder="Pesquise">
+            </label>
+            <span class="search-close" style="position: absolute;">&times;</span>
+          </div><!-- final da caixa de pesquisa -->
+        </div>
+        <!-- Container final -->
+
+      </div>
+      <!-- Navigation final -->
+    </header>
+    <!-- Header final -->
+
+    <div class="banner-carousel banner-carousel-1 mb-0">
+      <div class="banner-carousel-item" style="background-image:url(images/slider-main/slide-01.jpg)">
+        <div class="slider-content">
+          <div class="container h-100">
+            <div class="row align-items-center h-100">
+              <div class="col-md-12 text-center">
+                <h2 class="slide-title" data-animation-in="slideInLeft">Maquiar é, dar vida a arte</h2>
+                <h3 class="slide-sub-title" data-animation-in="slideInRight">BEAUTY ACADEMY</h3>
+                <p data-animation-in="slideInLeft" data-duration-in="1.2">
+                  <a href="#" class="slider btn btn-primary">Nossos Cursos</a>
+                  <a href="Contato.html" class="slider btn btn-primary border">Contato</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="banner-carousel-item" style="background-image:url(images/slider-main/slide-04.jpg)">
+        <div class="slider-content text-left">
+          <div class="container h-100">
+            <div class="row align-items-center h-100">
+              <div class="col-md-12">
+                <h2 class="slide-title-box" data-animation-in="slideInDown">Trilhando Caminhos</h2>
+                <h3 class="slide-title" data-animation-in="fadeIn">Fortalecendo vozes
+                </h3>
+                <h3 class="slide-sub-title" data-animation-in="slideInLeft">Rumo à Grandeza e Autodeterminação...</h3>
+                <p data-animation-in="slideInRight">
+                  <a href="Manifesto.html" class="slider btn btn-primary border">Manifesto</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="banner-carousel-item" style="background-image:url(images/slider-main/slide-03.jpg)">
+        <div class="slider-content text-right">
+          <div class="container h-100">
+            <div class="row align-items-center h-100">
+              <div class="col-md-12">
+                <h2 class="slide-title font-weight-bold" data-animation-in="slideInDown">Todo dia é dia de se cuidar..
+                </h2>
+                <h3 class="slide-sub-title" data-animation-in="fadeIn">A vida é passageira, suas conquistas
+                  não!</h3>
+                <div data-animation-in="slideInLeft">
+                  <a href="#" class="slider btn btn-primary border" aria-label="learn-more-about-us">Saiba mais
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--Fim do Carrossel-->
+
+    <section class="call-to-action-box no-padding">
+      <div class="container">
+        <div class="action-style-box" style="border-radius: 50px;">
+          <div class="row align-items-center">
+            <div class="col-md-8 text-center text-md-left">
+              <div class="call-to-action-text">
+                <h3 class="action-title">Comece do zero ou se especialize</h3>
+              </div>
+            </div><!-- Col final -->
+            <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
+              <div class="call-to-action-btn">
+                <a class="btn btn-dark" href="#" style="border-radius: 50px;">Veja Agora!</a>
+              </div>
+            </div><!-- col final -->
+          </div><!-- row final -->
+        </div><!-- Estilo da caixa de ação -->
+      </div><!-- Container final -->
+    </section><!-- final da seção -->
+
+    <section id="ts-features" class="ts-features">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="ts-intro">
+              <h3 class="into-sub-title">Beauty Academy</h3>
+              <p>
+                A Beauty Academy é mais do que uma simples plataforma de cursos profissionalizantes de estética e
+                bem-estar. Somos um movimento que transcende a beleza superficial e se compromete com uma transformação
+                profunda, tanto individual quanto coletiva. Ao se matricular em nossos cursos, você não está apenas
+                investindo em seu próprio crescimento profissional, mas também está contribuindo para algo maior...</p>
+            </div><!-- Caixa de introdução final -->
+
+            <div class="gap-20"></div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="ts-service-box">
+                  <span class="ts-service-icon">
+                    <i class="fas fa-certificate"></i>
+                  </span>
+                  <div class="ts-service-box-content">
+                    <h3 class="service-box-title">Certificado ao Concluir</h3>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="ts-service-box">
+                  <span class="ts-service-icon">
+                    <i class="fas fa-clock"></i>
+                  </span>
+                  <div class="ts-service-box-content">
+                    <h3 class="service-box-title">Flexibilidade de Horários</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="ts-service-box">
+                  <span class="ts-service-icon">
+                    <i class="fas fa-globe"></i>
+                  </span>
+                  <div class="ts-service-box-content">
+                    <h3 class="service-box-title">Plataforma on-line</h3>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="ts-service-box">
+                  <span class="ts-service-icon">
+                    <i class="fas fa-users"></i>
+                  </span>
+                  <div class="ts-service-box-content">
+                    <h3 class="service-box-title">Disponível a todos</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- Motivos final -->
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <h3 class="into-sub-title">Nossos Valores</h3>
+            <p>Compromisso com a Qualidade : Nossos cursos são cuidadosamente selecionados e combinados para oferecer
+              qualidade excepcional. Valorizamos a excelência em cada detalhe...</p>
+
+            <div class="accordion accordion-group" id="our-values-accordion">
+              <div class="card">
+                <div class="card-header p-0 bg-transparent" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-block text-left" type="button" data-toggle="collapse"
+                      data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Empoderamento Pessoal
+                    </button>
+                  </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                  data-parent="#our-values-accordion">
+                  <div class="card-body">
+                    Através de cursos criteriosamente selecionados, capacitamos
+                    você a alcançar seu potencial máximo, desenvolver confiança e alcançar seus objetivos. Na Beauty
+                    Academy, valorizamos seu crescimento e autodeterminação.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header p-0 bg-transparent" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                      data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Sustentabilidade
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#our-values-accordion">
+                  <div class="card-body">
+                    Nossos cursos destacam não apenas a excelência
+                    profissional, mas também o respeito ao meio ambiente e à comunidade. Comprometemo-nos a capacitar
+                    você de maneira responsável, promovendo o bem-estar duradouro da sociedade e do planeta.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header p-0 bg-transparent" id="headingThree">
+                  <h2 class="mb-0">
+                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                      data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Inovação Contínua
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                  data-parent="#our-values-accordion">
+                  <div class="card-body">
+                    Nossos cursos estão sempre atualizados, incorporando as últimas
+                    tendências e tecnologias. Buscamos inspirar sua criatividade e prepará-lo para liderar com confiança
+                    em um cenário em constante evolução na área de estética e bem-estar.
+                  </div>
+                </div>
+              </div>
+            </div><!--Final Sanfona-->
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="facts" class="facts-area dark-bg" style="background-color: rgba(0, 0, 0, 0.7);">
+      <div class="container">
+        <div class="facts-wrapper">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 ts-facts">
+              <div class="ts-facts-img">
+                <img loading="lazy" src="images/icon-image/Tumas.svg" alt="facts-img">
+              </div>
+              <div class="ts-facts-content">
+                <h2 class="ts-facts-num"><span class="counterUp" data-count="297">0</span></h2>
+                <h3 class="ts-facts-title" style="color: rgba(0, 0, 0, 0.9);">Total de Turmas</h3>
+              </div>
+            </div><!-- Turmas final -->
+
+            <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
+              <div class="ts-facts-img">
+                <img loading="lazy" src="images/icon-image/Alunos_Formados.svg" alt="facts-img">
+              </div>
+              <div class="ts-facts-content">
+                <h2 class="ts-facts-num"><span class="counterUp" data-count="5940">0</span></h2>
+                <h3 class="ts-facts-title" style="color: rgba(0, 0, 0, 0.9);">Alunos Formados</h3>
+              </div>
+            </div><!-- Alunos Final -->
+
+            <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
+              <div class="ts-facts-img">
+                <img loading="lazy" src="images/icon-image/Taxa_Empreg.svg" alt="facts-img">
+              </div>
+              <div class="ts-facts-content">
+                <h2 class="ts-facts-num"><span class="counterUp" data-count="83">83%</span>%</h2>
+                <h3 class="ts-facts-title" style="color: rgba(0, 0, 0, 0.9);">Taxa de Empregabilidade</h3>
+              </div>
+            </div><!-- Empregabilidade Final -->
+
+            <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
+              <div class="ts-facts-img">
+                <img loading="lazy" src="images/icon-image/Estados_Benef.svg" alt="facts-img">
+              </div>
+              <div class="ts-facts-content">
+                <h2 class="ts-facts-num"><span class="counterUp" data-count="7">0</span></h2>
+                <h3 class="ts-facts-title" style="color: rgba(0, 0, 0, 0.9);">Estados Beneficiados</h3>
+              </div>
+            </div><!-- Estados Final -->
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- fatos final -->
+
+    <section id="ts-service-area" class="ts-service-area pb-0">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-12">
+            <h2 class="section-title" style="color: #400036;">Transformando sonhos em</h2>
+            <h3 class="section-sub-title" style="color: #400036;">REALIDADE</h3>
+          </div>
+        </div>
+        <!-- Titulo da linha final -->
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="ts-service-box d-flex">
+              <div class="ts-service-box-info">
+                <h3 class="service-box-title" style="color: #400036;">Desenvolvendo Habilidades de Elite</h3>
+                <p>Desperte seu potencial máximo e alcance a maestria em sua área de interesse através de nossos cursos
+                  especializados.</p>
+              </div>
+            </div><!-- Motivo 1 -->
+
+            <div class="ts-service-box d-flex">
+              <div class="ts-service-box-info">
+                <h3 class="service-box-title" style="color: #400036;">Caminho para o Sucesso Profissional</h3>
+                <p>Empodere-se com conhecimento prático e ferramentas essenciais para conquistar seus objetivos na
+                  carreira.</p>
+              </div>
+            </div><!-- Motivo 2 -->
+
+            <div class="ts-service-box d-flex">
+              <div class="ts-service-box-info">
+                <h3 class="service-box-title" style="color: #400036;">Explorando Fronteiras Criativas</h3>
+                <p>Liberte sua criatividade e mergulhe em um mundo de possibilidades para moldar um futuro repleto de
+                  realizações.</p>
+              </div>
+            </div><!-- Motivo 3 -->
+
+          </div><!-- Col Final -->
+
+          <div class="col-lg-4 text-center">
+            <img loading="lazy" class="img-fluid" src="images/avatar/Serviço-Centralizado.jpg"
+              alt="avatar_centro_motivos">
+          </div><!-- Avatar Motivos -->
+
+          <div class="col-lg-4 mt-5 mt-lg-0 mb-4 mb-lg-0">
+            <div class="ts-service-box d-flex">
+              <div class="ts-service-box-info">
+                <h3 class="service-box-title" style="color: #400036;">Construindo Conexões e Redes Poderosas</h3>
+                <p>Aprenda com especialistas e colegas, estabelecendo conexões valiosas que podem impulsionar sua
+                  jornada rumo ao sucesso.</p>
+              </div>
+            </div><!-- Motivo 4 -->
+
+            <div class="ts-service-box d-flex">
+              <div class="ts-service-box-info">
+                <h3 class="service-box-title" style="color: #400036;">Crescimento Pessoal Além do Limite</h3>
+                <p>Além de habilidades técnicas, nossos cursos também promovem crescimento pessoal, fortalecendo sua
+                  resiliência e confiança.</p>
+              </div>
+            </div><!-- Motivo 5 -->
+
+            <div class="ts-service-box d-flex">
+              <div class="ts-service-box-info">
+                <h3 class="service-box-title" style="color: #400036;">Transformando Sonhos em Impacto Real</h3>
+                <p>Coloque em prática o que aprendeu conosco e faça a diferença, transformando seus sonhos em ações
+                  concretas e impactantes.</p>
+              </div>
+            </div><!-- Motivo 6 -->
+          </div><!-- Col final -->
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="Cursos_Recentes" class="Cursos_Recentes solid-bg">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-12">
+            <h3 class="section-sub-title">Cursos Recentes</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="shuffle-btn-group">
+              <label class="active" for="all">
+                <input type="radio" name="shuffle-filter" id="all" value="all" checked="checked">Todos
+              </label>
+              <label for="Estetica_Facial">
+                <input type="radio" name="shuffle-filter" id="Estetica_Facial" value="Estetica_Facial">Estética Avançada
+              </label>
+              <label for="Masso_Relax">
+                <input type="radio" name="shuffle-filter" id="Masso_Relax" value="Masso_Relax">Massagem e Relaxamento
+              </label>
+              <label for="Curso_Design_Unhas">
+                <input type="radio" name="shuffle-filter" id="Curso_Design_Unhas" value="Curso_Design_Unhas">Maquiagem e
+                Unhas
+              </label>
+              <label for="Terapias_Holísticas">
+                <input type="radio" name="shuffle-filter" id="Terapias_Holísticas" value="Terapias_Holísticas">Terapias
+                Holísticas e Cabelo
+              </label>
+            </div><!-- Filtros de cursos -->
+
+
+            <div class="row shuffle-wrapper">
+              <div class="col-1 shuffle-sizer"></div>
+
+              <div class="col-lg-4 col-md-6 shuffle-item"
+                data-groups="[&quot;Microp_Sobran&quot;,&quot;Estetica_Facial&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/Cursos/desig_sombra.jpg"
+                    aria-label="Curso de Micropigmentação de Sobrancelhas">
+                    <img class="img-fluid" src="images/Cursos/desig_sombra.jpg"
+                      alt="Curso de Micropigmentação de Sobrancelhas">
+                    <span class="gallery-icon"><i class="fa fa-plus"></i></span>
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="#">Micropigmentação de Sobrancelhas</a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 shuffle-item"
+                data-groups="[&quot;Estética_Corporal&quot;,&quot;Estetica_Facial&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/Cursos/celulite.jpg"
+                    aria-label="Estética Corporal e Tratamentos Anti-Celulite">
+                    <img class="img-fluid" src="images/Cursos/celulite.jpg"
+                      alt="Estética Corporal e Tratamentos Anti-Celulite">
+                    <span class="gallery-icon"><i class="fa fa-plus"></i></span>
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="#">Estética Corporal e Tratamentos Anti-Celulite</a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;Estetica_Facial&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/Cursos/Estetica_Facial.jpg" aria-label="Estetica_Facial">
+                    <img class="img-fluid" src="images/Cursos/Estetica_Facial.jpg" alt="Estetica_Facial">
+                    <span class="gallery-icon"><i class="fa fa-plus"></i></span>
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="#">Estética Facial</a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;Masso_Relax&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/Cursos/massoterapia.jpg"
+                    aria-label="Massoterapia e Relaxamento">
+                    <img class="img-fluid" src="images/Cursos/massoterapia.jpg" alt="Massoterapia e Relaxamento">
+                    <span class="gallery-icon"><i class="fa fa-plus"></i></span>
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="#">Massoterapia e Relaxamento</a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;Curso_Design_Unhas&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/Cursos/desig_unha.jpg"
+                    aria-label="Curso de Design de Unhas e Nail Art">
+                    <img class="img-fluid" src="images/Cursos/desig_unha.jpg" alt="Curso de Design de Unhas e Nail Art">
+                    <span class="gallery-icon"><i class="fa fa-plus"></i></span>
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="#">Curso de Design de Unhas e Nail Art</a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;Terapias_Holísticas&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/Cursos/holistica.jpg"
+                    aria-label="Terapias Holísticas e Aromaterapia">
+                    <img class="img-fluid" src="images/Cursos/holistica.jpg" alt="Terapias Holísticas e Aromaterapia">
+                    <span class="gallery-icon"><i class="fa fa-plus"></i></span>
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="#">Terapias Holísticas e Aromaterapia</a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 shuffle-item"
+                data-groups="[&quot;Maquiagem_Profissional&quot;,&quot;Curso_Design_Unhas&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/Cursos/maquia_event.jpg"
+                    aria-label="Maquiagem Profissional para Eventos">
+                    <img class="img-fluid" src="images/Cursos/maquia_event.jpg"
+                      alt="Maquiagem Profissional para Eventos">
+                    <span class="gallery-icon"><i class="fa fa-plus"></i></span>
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="#">Maquiagem Profissional para Eventos</a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 shuffle-item"
+                data-groups="[&quot;Terapia_Tratamento_Capilar&quot;,&quot;Terapias_Holísticas&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/Cursos/capilar.jpg"
+                    aria-label="Terapia Capilar e Tratamentos para Cabelo e Couro Cabeludo">
+                    <img class="img-fluid" src="images/Cursos/capilar.jpg"
+                      alt="Terapia Capilar e Tratamentos para Cabelo e Couro Cabeludo">
+                    <span class="gallery-icon"><i class="fa fa-plus"></i></span>
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="#">Terapia Capilar e Tratamentos para Cabelo e Couro Cabeludo</a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 shuffle-item"
+                data-groups="[&quot;Estética_Laser&quot;,&quot;Estetica_Facial&quot;]">
+                <div class="project-img-container">
+                  <a class="gallery-popup" href="images/Cursos/laser.jpg"
+                    aria-label="Estética Avançada em Radiofrequência e Laser">
+                    <img class="img-fluid" src="images/Cursos/laser.jpg"
+                      alt="Estética Avançada em Radiofrequência e Laser">
+                    <span class="gallery-icon"><i class="fa fa-plus"></i></span>
+                  </a>
+                  <div class="project-item-info">
+                    <div class="project-item-info-content">
+                      <h3 class="project-item-title">
+                        <a href="#">Estética Avançada em Radiofrequência e Laser</a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- Miniaturas cursos -->
+          </div>
+
+          <div class="col-12">
+            <div class="general-btn text-center">
+              <a class="btn btn-primary" href="#">Ver todos os cursos</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <section class="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="column-title">O que dizem nossos alunos:</h3>
+
+            <div id="testimonial-slide" class="testimonial-slide">
+              <div class="item">
+                <div class="quote-item">
+                  <span class="quote-text">
+                    O curso de Estética Facial Avançada da Beauty Academy foi incrível! Aprendi técnicas que nunca
+                    imaginava existirem e agora me sinto confiante para oferecer tratamentos de qualidade aos meus
+                    clientes. A abordagem socialmente responsável da escola também me impressionou, mostrando que a
+                    beleza pode ser combinada com valores verdadeiros.
+                  </span>
+
+                  <div class="quote-item-footer">
+                    <img loading="lazy" class="testimonial-thumb" src="images/alunos/Joana.png" alt="alunos_Joana">
+                    <div class="quote-item-info">
+                      <h3 class="quote-author">Joana Silva</h3>
+                      <span class="quote-subtext">Rio Branco - AC</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="quote-item">
+                  <span class="quote-text">
+                    Participei do Curso de Massoterapia e Relaxamento e estou extremamente satisfeito. Aprendi uma
+                    variedade de técnicas de massagem que me permitiram oferecer aos meus clientes uma experiência
+                    relaxante e terapêutica. O ambiente de aprendizado foi acolhedor e enriquecedor. Recomendo a Beauty
+                    Academy a todos!
+                  </span>
+
+                  <div class="quote-item-footer">
+                    <img loading="lazy" class="testimonial-thumb" src="images/alunos/Ricardo.png" alt="alunos_Ricardo">
+                    <div class="quote-item-info">
+                      <h3 class="quote-author">Ricardo Torres</h3>
+                      <span class="quote-subtext">São Paulo - SP</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="item">
+                <div class="quote-item">
+                  <span class="quote-text">
+                    Fiz o Curso de Micropigmentação de Sobrancelhas e fiquei impressionada com a atenção aos detalhes e
+                    a qualidade do ensino. Os instrutores são apaixonados pelo que fazem e isso se reflete em cada aula.
+                    Estou animada para aplicar as habilidades que adquiri e estou grata pela oportunidade de
+                    aprendizado.
+                  </span>
+
+                  <div class="quote-item-footer">
+                    <img loading="lazy" class="testimonial-thumb" src="images/alunos/Mariana.png" alt="alunos_Mariana">
+                    <div class="quote-item-info">
+                      <h3 class="quote-author">Mariana Santos</h3>
+                      <span class="quote-subtext">Magé - RJ</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- Avaliação Alunos Final-->
+          </div>
+
+          <div class="col-lg-6 mt-5 mt-lg-0">
+
+            <h3 class="column-title">Nossos parceiros</h3>
+
+            <div class="row all-alunos">
+              <div class="col-sm-4 col-6">
+                <figure class="alunos-logo">
+                  <a href="#!"><img loading="lazy" class="img-fluid" src="images/alunos/parc1.png"
+                      alt="parceiros" /></a>
+                </figure>
+              </div>
+
+              <div class="col-sm-4 col-6">
+                <figure class="alunos-logo">
+                  <a href="#!"><img loading="lazy" class="img-fluid" src="images/alunos/parc2.png"
+                      alt="parceiros-logo" /></a>
+                </figure>
+              </div>
+
+              <div class="col-sm-4 col-6">
+                <figure class="alunos-logo">
+                  <a href="#!"><img loading="lazy" class="img-fluid" src="images/alunos/parc3.png"
+                      alt="parceiros-logo" /></a>
+                </figure>
+              </div>
+
+              <div class="col-sm-4 col-6">
+                <figure class="alunos-logo">
+                  <a href="#!"><img loading="lazy" class="img-fluid" src="images/alunos/parc4.png"
+                      alt="parceiros-logo" /></a>
+                </figure>
+              </div>
+
+              <div class="col-sm-4 col-6">
+                <figure class="alunos-logo">
+                  <a href="#!"><img loading="lazy" class="img-fluid" src="images/alunos/parc5.png"
+                      alt="parceiros-logo" /></a>
+                </figure>
+              </div>
+
+              <div class="col-sm-4 col-6">
+                <figure class="alunos-logo">
+                  <a href="#!"><img loading="lazy" class="img-fluid" src="images/alunos/parc6.png"
+                      alt="parceiros-logo" /></a>
+                </figure>
+              </div>
+
+            </div><!-- Parceiros Final -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="subscribe no-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="subscribe-call-to-acton">
+              <h3>PODEMOS AJUDAR?</h3>
+              <h4>(11) 847-291-4353</h4>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="ts-newsletter row align-items-center">
+              <div class="col-md-5 newsletter-introtext">
+                <h4 class="text-white mb-0">INSCREVA-SE</h4>
+                <p class="text-white">Receba dicas e novidades no seu e-mail</p>
+              </div>
+
+              <div class="col-md-7 newsletter-form">
+                <form action="#" method="post">
+                  <div class="form-group">
+                    <label for="newsletter-email" class="content-hidden">
+                      E-mail do boletim informativo</label>
+                    <input type="email" name="email" id="newsletter-email" class="form-control form-control-lg"
+                      placeholder="Insira seu e-mail e aperte enter" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <section id="news" class="news">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-12">
+            <h2 class="section-title" style="color: #400036;">TRABALHO DE EXCELÊNCIA</h2>
+            <h3 class="section-sub-title" style="color: #400036;">PROJETOS SOCIAIS RECENTES</h3>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="latest-post">
+              <div class="latest-post-media">
+                <a href="#" class="latest-post-img">
+                  <img loading="lazy" class="img-fluid" src="images/news/Projetos sociais2.png" alt="img">
+                </a>
+              </div>
+              <div class="post-body">
+                <h4 class="post-title">
+                  <a href="#" class="d-inline-block">Beleza para Todos</a>
+                </h4>
+                <div class="latest-post-meta">
+                  <span class="post-item-date">
+                    <i class="fa fa-clock-o"></i> 20 Julho 2019
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="latest-post">
+              <div class="latest-post-media">
+                <a href="#" class="latest-post-img">
+                  <img loading="lazy" class="img-fluid" src="images/news/Projetos sociais1.png" alt="img">
+                </a>
+              </div>
+              <div class="post-body">
+                <h4 class="post-title">
+                  <a href="#" class="d-inline-block">Estética Solidária</a>
+                </h4>
+                <div class="latest-post-meta">
+                  <span class="post-item-date">
+                    <i class="fa fa-clock-o"></i> 13 Fevereiro 2021
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="latest-post">
+              <div class="latest-post-media">
+                <a href="#" class="latest-post-img">
+                  <img loading="lazy" class="img-fluid" src="images/news/Projeto sociais3.png" alt="img">
+                </a>
+              </div>
+              <div class="post-body">
+                <h4 class="post-title">
+                  <a href="#" class="d-inline-block">Beleza Sustentável</a>
+                </h4>
+                <div class="latest-post-meta">
+                  <span class="post-item-date">
+                    <i class="fa fa-clock-o"></i> 03 Março 2023
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="general-btn text-center mt-4">
+          <a class="btn btn-primary" href="#">VER TODAS AS POSTAGENS</a>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <footer id="footer" class="footer bg-overlay">
+      <div class="footer-main">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-lg-4 col-md-6 footer-widget footer-about">
+              <h3 class="widget-title"><a href="QuemSomos.html" style="text-decoration: none; color: inherit;">Quem
+                  Somos? </a></h3>
+              <img loading="lazy" width="200px" class="footer-logo" src="images/Beauty-Elegant  Logo (1).png"
+                alt="Beauty-Academy">
+            </div>
+
+            <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
+              <p>Nossa missão é clara: capacitar e transformar vidas. Oferecemos cursos de qualidade, promovendo a
+                inclusão social através da educação gratuita para pessoas de baixa renda. Além de fornecer habilidades
+                valiosas, nosso foco na empregabilidade impulsiona nossos alunos em direção a um futuro profissional
+                promissor e independente. Junte-se a nós e faça parte de uma jornada de crescimento, igualdade e
+                sucesso....</p>
+              <div class="footer-social">
+                <ul>
+                  <li><a href="" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li><a href="" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="" aria-label="youtube"><i class="fab fa-youtube"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
+              <h3 class="widget-title">Cursos</h3>
+              <ul class="list-arrow">
+                <li><a href="#">Estetica Avançada</a></li>
+                <li><a href="#">Massagem e Relaxamento</a></li>
+                <li><a href="#">Maquiagem e Unhas</a></li>
+                <li><a href="#">Terapia Holísticas e Cabelo</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <div class="copyright-info">
+                <span>Copyright &copy;
+                  <script>
+                    document.write(new Date().getFullYear())
+                  </script>, Designed &amp; Projetado e desenvolvido pela <a href="Equipe-squad-28">Beauty Academy</a>
+                </span>
+              </div>
+            </div>
+
+
+            <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
+              <button class="btn btn-primary" title="Back to Top">
+                <i class="fa fa-angle-double-up"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+    </footer>
+
+
+    <!--scripts -->
+
+    <!-- jQuery Library -->
+    <script src="plugins/jQuery/jquery.min.js"></script>
+    <!-- Bootstrap jQuery -->
+    <script src="plugins/bootstrap/bootstrap.min.js" defer></script>
+    <!-- Slick Carousel -->
+    <script src="plugins/slick/slick.min.js"></script>
+    <script src="plugins/slick/slick-animation.min.js"></script>
+    <!-- Color box -->
+    <script src="plugins/colorbox/jquery.colorbox.js"></script>
+    <!-- shuffle -->
+    <script src="plugins/shuffle/shuffle.min.js" defer></script>
+    <!-- Template custom -->
+    <script src="js/script.js"></script>
+    <!-- Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"></script>
+
+  </div>
+
+</body>
+
+</html>
