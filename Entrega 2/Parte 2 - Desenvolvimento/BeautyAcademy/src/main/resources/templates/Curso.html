@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciamento de Cursos</title>
+
+    <!-- Adicionando Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Adicionando JavaScript para confirmar a exclusão -->
+    <script>
+        function confirmarExclusao() {
+            return confirm("Tem certeza que deseja excluir este curso?");
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <h2>Gerenciamento de Cursos</h2>
+
+        <!-- Formulário para Cadastrar Curso -->
+        <form th:action="@{/cursos/save}" method="post">
+            <!-- Campos do formulário -->
+            <div class="form-group">
+                <label for="idCurso">IDCurso:</label>
+                <input type="text" class="form-control" id="idCurso" th:field="*{idCurso}" />
+            </div>
+            <div class="form-group">
+                <label for="nomeCurso">Nome</label>
+                <input type="text" class="form-control" id="nomeCurso" th:field="*{nomeCurso}" />
+            </div>
+
+            <input type="submit" class="btn btn-success" value="Cadastrar Curso" />
+        </form>
+
+        <!-- Lista de Cursos -->
+        <table class="table mt-5">
+            <thead>
+                <tr>
+                    <th>IDCurso</th>
+                    <th>Nome</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Iterar sobre a lista de cursos e exibir os dados -->
+                <tr th:each="curso : ${cursos}">
+                    <td th:text="${curso.idCurso}"></td>
+                    <td th:text="${curso.nomeCurso}"></td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <a th:href="@{'/cursos/edit/' + ${curso.idCurso}}" class="btn btn-warning">Editar</a>
+                            <form th:action="@{'/cursos/delete/' + ${curso.idCurso}}" method="post"
+                                onsubmit="return confirmarExclusao()">
+                                <input type="submit" class="btn btn-danger ml-1" value="Excluir" />
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- Adicionando Bootstrap JS e Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
