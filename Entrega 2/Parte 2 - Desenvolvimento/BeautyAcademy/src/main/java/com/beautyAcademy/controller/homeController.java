@@ -1,4 +1,4 @@
-package com.beuatyAcademy.controller;
+package com.beautyAcademy.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +24,18 @@ public class homeController {
     @GetMapping("/Manifesto.html")
     public String manifesto() {
         return "Manifesto.html";}
+    
+    @GetMapping("/Aluno.html")
+    public String aluno() {
+        return "Aluno.html";}
+    
+    @GetMapping("/Matricula.html")
+    public String matricula() {
+        return "Matricula.html";}
+    
+    @GetMapping("/Curso.html")
+    public String curso() {
+        return "Curso.html";}
 
     }
 
