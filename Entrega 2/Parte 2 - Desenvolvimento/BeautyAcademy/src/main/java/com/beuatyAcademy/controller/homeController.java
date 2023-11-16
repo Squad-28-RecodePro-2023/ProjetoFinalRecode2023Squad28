@@ -23,6 +23,7 @@ public class homeController {
     
     @GetMapping("/Manifesto.html")
     public String manifesto() {
-        return "Manifesto.html";
+        return "Manifesto.html";}
+
     }
-}
+

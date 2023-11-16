@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciamento de Alunos</title>
+
+    <!-- Adicionando Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Adicionando JavaScript para confirmar a exclusão -->
+    <script>
+        function confirmarExclusao() {
+            return confirm("Tem certeza que deseja excluir este aluno?");
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <h2>Gerenciamento de Alunos</h2>
+
+        <!-- Campos do formulário -->
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" id="nome" th:field="*{nome}" />
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" th:field="*{email}" />
+        </div>
+        <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" class="form-control" id="senha" th:field="*{senha}" />
+        </div>
+        <div class="form-group">
+            <label for="celular">Celular:</label>
+            <input type="text" class="form-control" id="celular" th:field="*{celular}" />
+        </div>
+
+        <input type="submit" class="btn btn-success" value="Cadastrar Aluno" />
+
+        <!-- Lista de Alunos -->
+<table class="table mt-5">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Celular</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Iterar sobre a lista de alunos e exibir os dados -->
+        <tr th:each="aluno : ${alunos}">
+            <td th:text="${aluno.id}"></td>
+            <td th:text="${aluno.nome}"></td>
+            <td th:text="${aluno.email}"></td>
+            <td th:text="${aluno.celular}"></td>
+            <td>
+                <div class="btn-group" role="group">
+                    <a th:href="@{'/alunos/edit/' + ${aluno.id}}" class="btn btn-warning">Editar</a>
+                    <form th:action="@{'/alunos/delete/' + ${aluno.id}}" method="post"
+                        onsubmit="return confirmarExclusao()">
+                        <input type="submit" class="btn btn-danger ml-1" value="Excluir" />
+                        <!-- Adicionado ml-1 (margin-left: 1) para espaçamento -->
+                    </form>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+    </div>
+
+    <!-- Adicionando Bootstrap JS e Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
