@@ -24,11 +24,7 @@ public class homeController {
     @GetMapping("/Manifesto.html")
     public String manifesto() {
         return "Manifesto.html";}
-    
-    @GetMapping("/Aluno.html")
-    public String aluno() {
-        return "Aluno.html";}
-    
+        
     @GetMapping("/Matricula.html")
     public String matricula() {
         return "Matricula.html";}
