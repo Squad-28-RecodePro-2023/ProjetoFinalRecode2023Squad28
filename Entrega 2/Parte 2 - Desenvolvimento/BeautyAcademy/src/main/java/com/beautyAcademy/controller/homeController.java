@@ -25,13 +25,6 @@ public class homeController {
     public String manifesto() {
         return "Manifesto.html";}
         
-    @GetMapping("/Matricula.html")
-    public String matricula() {
-        return "Matricula.html";}
-    
-    @GetMapping("/Curso.html")
-    public String curso() {
-        return "Curso.html";}
 
     }
 
