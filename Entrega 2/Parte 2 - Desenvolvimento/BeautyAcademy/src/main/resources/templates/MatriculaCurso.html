@@ -332,7 +332,7 @@
 					<div class="card">
 						<div class="card-body">
 							<h2 class="text-center mb-4" style="color: #400036;">Lista de Matriculas</h2>
-							<table class="table">
+							<table id="tabelaMatriculas" class="table">
 								<thead>
 									<tr>
 										<th>#ID Matricula Curso</th>
@@ -464,6 +464,7 @@
 			</div>
 		</div>
 	</div>
+	
 </div>
 <!-- jQuery Library -->
 <script src="plugins/jQuery/jquery.min.js"></script>
@@ -521,7 +522,43 @@
 	});
 </script>
 
+<script>
+	$(document).ready(function () {
+		// Função para obter e atualizar os dados da tabela
+		function atualizarTabela() {
+			$.ajax({
+				url: '/obter-matriculas-cursos',
+				method: 'GET',
+				dataType: 'json',
+				success: function (data) {
+					// Limpar a tabela
+					$('#tabelaMatriculas tbody').empty();
 
+					// Preencher a tabela com os novos dados
+					data.forEach(function (matriculaCurso) {
+						var linha = '<tr id="matriculacurso-' + matriculaCurso.idMatriculaCurso + '">';
+						linha += '<td>' + matriculaCurso.idMatriculaCurso + '</td>';
+						linha += '<td>' + matriculaCurso.aluno.matricula + '</td>';
+						linha += '<td>' + matriculaCurso.curso.idCurso + '</td>';
+						linha += '<td>';
+						linha += '<a href="/editar-matriculacurso/' + matriculaCurso.idMatriculaCurso + '" class="btn btn-primary btn-sm btn-editar" style="border-radius: 25px;">Editar</a>';
+						linha += '<a href="/excluir-matriculacurso/' + matriculaCurso.idMatriculaCurso + '" class="btn btn-danger btn-sm btn-excluir" style="border-radius: 25px;">Excluir</a>';
+						linha += '</td>';
+						linha += '</tr>';
+
+						$('#tabelaMatriculas tbody').append(linha);
+					});
+				},
+				error: function () {
+					alert('Erro ao obter os dados da tabela.');
+				}
+			});
+		}
+
+		// Chamar a função de atualização quando a página é carregada
+		atualizarTabela();
+	});
+</script>
 
 </body>
 

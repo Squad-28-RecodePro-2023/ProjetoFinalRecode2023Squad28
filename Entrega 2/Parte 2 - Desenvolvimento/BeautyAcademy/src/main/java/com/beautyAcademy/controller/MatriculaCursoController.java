@@ -84,4 +84,10 @@ public class MatriculaCursoController {
 	public MatriculaCurso obterMatriculaCursoParaEdicao(@PathVariable int idMatriculaCurso) {
 		return matriculaCursoService.buscarPorId(idMatriculaCurso).orElseThrow();
 	}
+	
+	@GetMapping("/obter-matriculas-cursos")
+	@ResponseBody
+	public List<MatriculaCurso> obterMatriculasCursos() {
+	    return matriculaCursoService.listarTodasMatriculasCursos();
+	}
 }
