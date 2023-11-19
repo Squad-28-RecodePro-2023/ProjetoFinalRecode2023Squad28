@@ -289,7 +289,7 @@
 								<!-- Campo para matriculaAluno (chave estrangeira) -->
 								<div class="form-group col-md-6">
 									<label for="matriculaAluno">Matrícula do Aluno:</label>
-									<select class="form-control" id="matriculaAluno" name="matriculaAluno" required>
+									<select class="form-control" id="matriculaAluno" name="aluno" required>
 										<!-- Iterar sobre a lista de alunos e preencher as opções -->
 										<option th:each="aluno : ${alunos}" th:value="${aluno.matricula}"
 											th:text="${aluno.matricula}"></option>
@@ -301,7 +301,7 @@
 								<!-- Campo para idCurso (chave estrangeira) -->
 								<div class="form-group col-md-6">
 									<label for="idCurso">ID Curso:</label>
-									<select class="form-control" id="idCurso" name="idCurso" required>
+									<select class="form-control" id="idCurso" name="curso" required>
 										<!-- Iterar sobre a lista de cursos e preencher as opções -->
 										<option th:each="curso : ${cursos}" th:value="${curso.idCurso}"
 											th:text="${curso.idCurso}"></option>
