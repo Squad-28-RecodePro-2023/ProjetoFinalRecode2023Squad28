@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `beautyacademy` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE  IF NOT EXISTS `beautyacademy` /*!40100 DEFAULT CHARACTER SET utf8mb3 */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `beautyacademy`;
 -- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
 --
@@ -26,15 +26,13 @@ DROP TABLE IF EXISTS `aluno`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `aluno` (
   `matricula` int NOT NULL AUTO_INCREMENT,
-  `email` varchar(50) NOT NULL,
-  `senha` varchar(20) NOT NULL,
-  `nome` varchar(50) NOT NULL,
-  `celular` int NOT NULL,
+  `celular` bigint NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `senha` varchar(255) NOT NULL,
   PRIMARY KEY (`matricula`),
-  UNIQUE KEY `matricula_UNIQUE` (`matricula`),
-  UNIQUE KEY `email_UNIQUE` (`email`),
-  UNIQUE KEY `senha_UNIQUE` (`senha`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  UNIQUE KEY `UK_3wpes15e0anbfaa4do0pey97k` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,6 +41,7 @@ CREATE TABLE `aluno` (
 
 LOCK TABLES `aluno` WRITE;
 /*!40000 ALTER TABLE `aluno` DISABLE KEYS */;
+INSERT INTO `aluno` VALUES (1,21965777053,'daniel.lira.s23@gmail.com','Daniel Lira da Silva silva','12345'),(21,12345678999,'antonio@gmail.com','Antonio Carlos','eragryuhjd'),(22,12345678999,'alabaixou@xou.com','Alabaiou','ydhgvsfcxa');
 /*!40000 ALTER TABLE `aluno` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -54,12 +53,11 @@ DROP TABLE IF EXISTS `curso`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `curso` (
-  `idCurso` int NOT NULL AUTO_INCREMENT,
-  `nome` varchar(50) NOT NULL,
-  PRIMARY KEY (`idCurso`),
-  UNIQUE KEY `idCurso_UNIQUE` (`idCurso`),
-  UNIQUE KEY `nome_UNIQUE` (`nome`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `id_curso` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  PRIMARY KEY (`id_curso`),
+  UNIQUE KEY `UK_bdhliwglt8i7q1v80fb95vea9` (`nome`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,35 +66,37 @@ CREATE TABLE `curso` (
 
 LOCK TABLES `curso` WRITE;
 /*!40000 ALTER TABLE `curso` DISABLE KEYS */;
+INSERT INTO `curso` VALUES (1,'Barbeiro'),(2,'manicure'),(3,'pigmentação');
 /*!40000 ALTER TABLE `curso` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `matriculacurso`
+-- Table structure for table `matricula_curso`
 --
 
-DROP TABLE IF EXISTS `matriculacurso`;
+DROP TABLE IF EXISTS `matricula_curso`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `matriculacurso` (
-  `idMatriculaCurso` int NOT NULL,
-  `matriculaAluno` int NOT NULL,
-  `idCurso` int NOT NULL,
-  PRIMARY KEY (`idMatriculaCurso`),
-  KEY `FK_matriculaAluno` (`matriculaAluno`),
-  KEY `FK_idCurso` (`idCurso`),
-  CONSTRAINT `FK_idCurso` FOREIGN KEY (`idCurso`) REFERENCES `curso` (`idCurso`) ON DELETE RESTRICT,
-  CONSTRAINT `FK_matriculaAluno` FOREIGN KEY (`matriculaAluno`) REFERENCES `aluno` (`matricula`) ON DELETE RESTRICT
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+CREATE TABLE `matricula_curso` (
+  `id_matricula_curso` int NOT NULL AUTO_INCREMENT,
+  `matricula_aluno` int DEFAULT NULL,
+  `id_curso` int DEFAULT NULL,
+  PRIMARY KEY (`id_matricula_curso`),
+  KEY `FK8sv8bcnhsali67nfphya6itaq` (`matricula_aluno`),
+  KEY `FK3afp2epou4akwv3offsnns0pj` (`id_curso`),
+  CONSTRAINT `FK3afp2epou4akwv3offsnns0pj` FOREIGN KEY (`id_curso`) REFERENCES `curso` (`id_curso`),
+  CONSTRAINT `FK8sv8bcnhsali67nfphya6itaq` FOREIGN KEY (`matricula_aluno`) REFERENCES `aluno` (`matricula`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `matriculacurso`
+-- Dumping data for table `matricula_curso`
 --
 
-LOCK TABLES `matriculacurso` WRITE;
-/*!40000 ALTER TABLE `matriculacurso` DISABLE KEYS */;
-/*!40000 ALTER TABLE `matriculacurso` ENABLE KEYS */;
+LOCK TABLES `matricula_curso` WRITE;
+/*!40000 ALTER TABLE `matricula_curso` DISABLE KEYS */;
+INSERT INTO `matricula_curso` VALUES (9,22,3),(11,21,2),(12,21,2),(13,22,3);
+/*!40000 ALTER TABLE `matricula_curso` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -108,4 +108,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-11 13:17:37
+-- Dump completed on 2023-11-19 22:56:37
