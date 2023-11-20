@@ -348,21 +348,8 @@
 										<td th:text="${matriculaCurso.idMatriculaCurso}"></td>
 										<td th:text="${matriculaCurso.matriculaAluno}"></td>
 										<td th:text="${matriculaCurso.idCurso}"></td>
-										<td>
-											<!-- Botões de editar e excluir -->
-											<!-- Botão Editar -->
-											<a th:href="@{'/editar-matriculacurso/' + ${matriculaCurso.idMatriculaCurso}}"
-												class="btn btn-primary btn-sm btn-editar"
-												style="border-radius: 25px;">Editar
-											</a>
-											<a th:href="@{'/excluir-matriculacurso/' + ${matriculaCurso.idMatriculaCurso}}"
-												class="btn btn-danger btn-sm btn-excluir"
-												style="border-radius: 25px;">Excluir
-											</a>
-										</td>
 									</tr>
 								</tbody>
-
 							</table>
 						</div>
 					</div>
@@ -464,7 +451,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 </div>
 <!-- jQuery Library -->
 <script src="plugins/jQuery/jquery.min.js"></script>
@@ -484,42 +471,10 @@
 	integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
 	crossorigin="anonymous"></script>
 
-
 <script th:if="${param.sucesso != null}">
 	setTimeout(function () {
 		document.getElementById('successAlert').style.display = 'none';
 	}, 5000);  // 5000 milissegundos = 5 segundos
-</script>
-
-<script>
-	$(document).ready(function () {
-		// Manipula o clique no botão de exclusão
-		$('.btn-excluir').on('click', function (event) {
-			event.preventDefault();
-
-			// Obtém a URL de exclusão do atributo href
-			var url = $(this).attr('href');
-
-			// Obtém o identificador exclusivo do aluno a partir do id da linha
-			var alunoId = $(this).closest('tr').attr('id').split('-')[1];
-
-			// Confirmação de exclusão
-			if (confirm('Deseja realmente excluir este aluno?')) {
-				// Realiza uma requisição AJAX para excluir o aluno
-				$.ajax({
-					url: url,
-					type: 'DELETE',
-					success: function () {
-						// Remove a linha da tabela após a exclusão bem-sucedida
-						$('#aluno-' + alunoId).remove();
-					},
-					error: function () {
-						alert('Erro ao excluir o aluno.');
-					}
-				});
-			}
-		});
-	});
 </script>
 
 <script>
@@ -540,10 +495,7 @@
 						linha += '<td>' + matriculaCurso.idMatriculaCurso + '</td>';
 						linha += '<td>' + matriculaCurso.aluno.matricula + '</td>';
 						linha += '<td>' + matriculaCurso.curso.idCurso + '</td>';
-						linha += '<td>';
-						linha += '<a href="/editar-matriculacurso/' + matriculaCurso.idMatriculaCurso + '" class="btn btn-primary btn-sm btn-editar" style="border-radius: 25px;">Editar</a>';
-						linha += '<a href="/excluir-matriculacurso/' + matriculaCurso.idMatriculaCurso + '" class="btn btn-danger btn-sm btn-excluir" style="border-radius: 25px;">Excluir</a>';
-						linha += '</td>';
+						linha += '<td><a href="/editar-matriculacurso/' + matriculaCurso.idMatriculaCurso + '" class="btn btn-primary btn-sm btn-editar" style="border-radius: 25px;">Editar</a> <button class="btn btn-danger btn-sm btn-excluir" style="border-radius: 25px;" data-id="' + matriculaCurso.idMatriculaCurso + '">Excluir</button></td>';
 						linha += '</tr>';
 
 						$('#tabelaMatriculas tbody').append(linha);
@@ -557,8 +509,28 @@
 
 		// Chamar a função de atualização quando a página é carregada
 		atualizarTabela();
+
+		// Adicionar evento de clique nos botões de exclusão
+		$('#tabelaMatriculas').on('click', '.btn-excluir', function () {
+			var idMatriculaCurso = $(this).data('id');
+			if (confirm('Tem certeza que deseja excluir esta matrícula?')) {
+				// Enviar requisição DELETE
+				$.ajax({
+					url: '/excluirmatriculacurso/' + idMatriculaCurso,
+					method: 'DELETE',
+					success: function () {
+						// Atualizar a tabela após a exclusão
+						atualizarTabela();
+					},
+					error: function () {
+						alert('Erro ao excluir matrícula.');
+					}
+				});
+			}
+		});
 	});
 </script>
+
 
 </body>
 
