@@ -325,38 +325,40 @@
 	<div class="container">
 		<hr class="divider" style="color: #400036; border-width: 2px; height: 3px; border-color: #400036;">
 	</div>
-	<section class="container-fluid">
-		<div class="container mt-5">
-			<div class="row justify-content-center">
-				<div class="col-md-10">
-					<div class="card">
-						<div class="card-body">
-							<h2 class="text-center mb-4" style="color: #400036;">Lista de Matriculas</h2>
-							<table id="tabelaMatriculas" class="table">
-								<thead>
-									<tr>
-										<th>#ID Matricula Curso</th>
-										<th>Matricula Aluno</th>
-										<th>#ID Curso</th>
-										<th>Ações</th>
-									</tr>
-								</thead>
-								<tbody>
-									<!-- Iterar sobre a lista de matriculas cursos -->
-									<tr th:each="matriculaCurso : ${matriculascursos}"
-										th:id="'matriculacurso-' + ${matriculaCurso.idMatriculaCurso}">
-										<td th:text="${matriculaCurso.idMatriculaCurso}"></td>
-										<td th:text="${matriculaCurso.matriculaAluno}"></td>
-										<td th:text="${matriculaCurso.idCurso}"></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
+<section class="container-fluid mt-5">
+	<div class="row justify-content-center">
+		<div class="col-md-10">
+			<div class="card">
+				<div class="card-body">
+					<h2 class="text-center mb-4" style="color: #400036;">Lista de Matriculas</h2>
+					<div class="table-responsive"> <!-- Adicione esta linha -->
+						<table id="tabelaMatriculas" class="table">
+							<thead>
+								<tr>
+									<th>#ID Matricula Curso</th>
+									<th>Matricula Aluno</th>
+									<th>#ID Curso</th>
+									<th>Ações</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- Iterar sobre a lista de matriculas cursos -->
+								<tr th:each="matriculaCurso : ${matriculascursos}"
+									th:id="'matriculacurso-' + ${matriculaCurso.idMatriculaCurso}">
+									<td th:text="${matriculaCurso.idMatriculaCurso}"></td>
+									<td th:text="${matriculaCurso.matriculaAluno}"></td>
+									<td th:text="${matriculaCurso.idCurso}"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div> <!-- Adicione esta linha -->
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
+
+
 
 	<footer id="footer" class="footer bg-overlay">
 		<div class="footer-main">

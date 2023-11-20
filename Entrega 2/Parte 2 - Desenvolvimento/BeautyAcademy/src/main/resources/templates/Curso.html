@@ -316,47 +316,49 @@
 		<div class="container">
 			<hr class="divider" style="color: #400036; border-width: 2px; height: 3px; border-color: #400036;">
 		</div>
-		<section class="container-fluid">
-			<div class="container mt-5">
-				<div class="row justify-content-center">
-					<div class="col-md-10">
-						<div class="card">
-							<div class="card-body">
-								<h2 class="text-center mb-4" style="color: #400036;">Lista de Cursos</h2>
-								<table class="table">
-									<thead>
-										<tr>
-											<th>#Id Curso</th>
-											<th>Nome</th>
-											<th>Ações</th>
-										</tr>
-									</thead>
-									<tbody>
-										<!-- Iterar sobre a lista de cursos -->
-										<tr th:each="curso : ${cursos}" th:id="'curso-' + ${cursoidCurso}">
-											<td th:text="${curso.idCurso}"></td>
-											<td th:text="${curso.nome}"></td>
-											<td>
-												<!-- Botões de editar e excluir -->
-												<!-- Botão Editar -->
-												<a th:href="@{'/editar-curso/' + ${curso.idCurso}}"
-													class="btn btn-primary btn-sm btn-editar"
-													style="border-radius: 25px;">
-													Editar
-												</a>
-												<a th:href="@{'/excluir-curso/' + ${curso.idCurso}}"
-													class="btn btn-danger btn-sm btn-excluir"
-													style="border-radius: 25px;">Excluir</a>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
+<section class="container-fluid mt-5">
+	<div class="row justify-content-center">
+		<div class="col-md-10">
+			<div class="card">
+				<div class="card-body">
+					<h2 class="text-center mb-4" style="color: #400036;">Lista de Cursos</h2>
+					<div class="table-responsive"> <!-- Adicione esta linha -->
+						<table class="table">
+							<thead>
+								<tr>
+									<th>#Id Curso</th>
+									<th>Nome</th>
+									<th>Ações</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- Iterar sobre a lista de cursos -->
+								<tr th:each="curso : ${cursos}" th:id="'curso-' + ${cursoidCurso}">
+									<td th:text="${curso.idCurso}"></td>
+									<td th:text="${curso.nome}"></td>
+									<td>
+										<!-- Botões de editar e excluir -->
+										<!-- Botão Editar -->
+										<a th:href="@{'/editar-curso/' + ${curso.idCurso}}"
+											class="btn btn-primary btn-sm btn-editar"
+											style="border-radius: 25px;">
+											Editar
+										</a>
+										<a th:href="@{'/excluir-curso/' + ${curso.idCurso}}"
+											class="btn btn-danger btn-sm btn-excluir"
+											style="border-radius: 25px;">Excluir</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div> <!-- Adicione esta linha -->
 				</div>
 			</div>
-		</section>
+		</div>
+	</div>
+</section>
+
+
 
 		<footer id="footer" class="footer bg-overlay">
 			<div class="footer-main">
