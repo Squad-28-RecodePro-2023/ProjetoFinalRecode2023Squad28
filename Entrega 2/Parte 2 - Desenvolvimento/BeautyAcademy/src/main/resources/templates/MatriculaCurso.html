@@ -429,22 +429,29 @@
 			</div>
 	</footer>
 
-	<!-- Modal -->
-	<div class="modal fade" id="editMatriculaCursoModal" tabindex="-1" role="dialog"
-		aria-labelledby="editMatriculaCursoModalLabel" aria-hidden="true">
+	<!-- Modal de Edição -->
+	<div class="modal fade" id="editarMatriculaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" style="color: #400036;" id="editMatriculaCursoModalLabel">Editar
-						Matricula-Curso</h5>
-					<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+					<h5 class="modal-title" id="exampleModalLabel" style="color: #400036;">Editar Matrícula</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<div class="modal-body">
-					<form action="/cadastrar-matriculacurso" method="post">
-						<input type="hidden" id="editidMatriculaCurso" name="idMatriculaCurso" />
-
+					<!-- Formulário de Edição -->
+					<form id="formEditarMatricula" action="/cadastrar-matriculacurso" method="post">
+						<input type="" id="editIdMatricula" name="idMatriculaCurso">
+						<div class="form-group">
+							<label for="editMatriculaAluno">Matrícula do Aluno:</label>
+							<input type="text" class="form-control" id="editMatriculaAluno" name="aluno">
+						</div>
+						<div class="form-group">
+							<label for="editIdCurso">ID do Curso:</label>
+							<input type="text" class="form-control" id="editIdCurso" name="curso">
+						</div>
 						<button type="submit" class="btn btn-primary">Salvar Alterações</button>
 					</form>
 				</div>
@@ -453,10 +460,12 @@
 	</div>
 
 </div>
+
+</div>
 <!-- jQuery Library -->
 <script src="plugins/jQuery/jquery.min.js"></script>
 <!-- Bootstrap jQuery -->
-<script src="plugins/bootstrap/bootstrap.min.js" defer></script>
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
 <!-- Slick Carousel -->
 <script src="plugins/slick/slick.min.js"></script>
 <script src="plugins/slick/slick-animation.min.js"></script>
@@ -466,10 +475,6 @@
 <script src="plugins/shuffle/shuffle.min.js" defer></script>
 <!-- Template custom -->
 <script src="js/script.js"></script>
-<!-- Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-	integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-	crossorigin="anonymous"></script>
 
 <script th:if="${param.sucesso != null}">
 	setTimeout(function () {
@@ -495,7 +500,8 @@
 						linha += '<td>' + matriculaCurso.idMatriculaCurso + '</td>';
 						linha += '<td>' + matriculaCurso.aluno.matricula + '</td>';
 						linha += '<td>' + matriculaCurso.curso.idCurso + '</td>';
-						linha += '<td><a href="/editar-matriculacurso/' + matriculaCurso.idMatriculaCurso + '" class="btn btn-primary btn-sm btn-editar" style="border-radius: 25px;">Editar</a> <button class="btn btn-danger btn-sm btn-excluir" style="border-radius: 25px;" data-id="' + matriculaCurso.idMatriculaCurso + '">Excluir</button></td>';
+						linha += '<td><button class="btn btn-primary btn-sm btn-editar" style="border-radius: 25px;" data-toggle="modal" data-target="#editarMatriculaModal" data-id-matricula="' + matriculaCurso.idMatriculaCurso + '">Editar</button></td>';
+						linha += '<td><button class="btn btn-danger btn-sm btn-excluir" style="border-radius: 25px;" data-id="' + matriculaCurso.idMatriculaCurso + '">Excluir</button></td>';
 						linha += '</tr>';
 
 						$('#tabelaMatriculas tbody').append(linha);
@@ -531,6 +537,23 @@
 	});
 </script>
 
+<script>
+	$(document).ready(function () {
+		// Evento de clique no botão Editar
+		$('#tabelaMatriculas').on('click', '.btn-editar', function () {
+			var idMatriculaCurso = $(this).data('id');
+			var matriculaAluno = $(this).data('matricula-aluno');
+			var idCurso = $(this).data('id-curso');
+
+			// Abrir o modal de edição
+			$('#editarMatriculaModal').modal('show');
+		});
+
+		// Fechar o modal após a edição
+		$('#editarMatriculaModal').modal('hide');
+	});
+
+</script>
 
 </body>
 
