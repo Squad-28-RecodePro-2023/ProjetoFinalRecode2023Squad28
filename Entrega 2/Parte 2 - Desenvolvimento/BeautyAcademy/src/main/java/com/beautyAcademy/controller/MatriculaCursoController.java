@@ -61,7 +61,7 @@ public class MatriculaCursoController {
 		model.addAttribute("matriculaCurso", matriculaCurso);
 		model.addAttribute("alunos", alunos);
 		model.addAttribute("cursos", cursos);
-		
+
 		return "MatriculaCurso.html";
 	}
 
@@ -73,10 +73,10 @@ public class MatriculaCursoController {
 		return "redirect:/MatriculaCurso.html?sucesso=true";
 	}
 
-	@DeleteMapping("/excluir-matriculacurso/{idMatriculaCurso}")
+	@DeleteMapping("/excluirmatriculacurso/{idMatriculaCurso}")
 	public ResponseEntity<Void> excluirMatriculaCurso(@PathVariable int idMatriculaCurso) {
 		matriculaCursoService.excluirMatriculaCurso(idMatriculaCurso);
-		return ResponseEntity.ok().build();
+		return ResponseEntity.noContent().build();
 	}
 
 	@GetMapping("/editar-matriculacurso/{idMatriculaCurso}")
@@ -84,10 +84,10 @@ public class MatriculaCursoController {
 	public MatriculaCurso obterMatriculaCursoParaEdicao(@PathVariable int idMatriculaCurso) {
 		return matriculaCursoService.buscarPorId(idMatriculaCurso).orElseThrow();
 	}
-	
+
 	@GetMapping("/obter-matriculas-cursos")
 	@ResponseBody
 	public List<MatriculaCurso> obterMatriculasCursos() {
-	    return matriculaCursoService.listarTodasMatriculasCursos();
+		return matriculaCursoService.listarTodasMatriculasCursos();
 	}
 }
