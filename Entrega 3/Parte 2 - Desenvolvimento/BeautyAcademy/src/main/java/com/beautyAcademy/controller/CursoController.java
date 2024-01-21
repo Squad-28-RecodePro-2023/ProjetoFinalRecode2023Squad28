@@ -31,6 +31,13 @@ public class CursoController {
         model.addAttribute("cursos", cursos);
         return "Curso.html";
     }
+    
+    @GetMapping("/PCursos.html")
+    public String pcurso(Model model) {
+        List<Curso> cursos = cursoService.listarTodosCursos();
+        model.addAttribute("cursos", cursos);
+        return "PCursos.html";
+    }
 
     @PostMapping("/cadastrar-curso")
     public String cadastrarCurso(Curso curso, Model model) {
@@ -49,5 +56,11 @@ public class CursoController {
     @ResponseBody
     public Curso obterCursoParaEdicao(@PathVariable int idCurso) {
         return cursoService.buscarPorId(idCurso).orElseThrow();
+    }
+    
+    @GetMapping("/{idCurso}")
+    public String cursos(@PathVariable Long idCurso) {
+        // Retorne o nome da página HTML correspondente ao ID do curso
+        return "/cursos/" + idCurso + ".html";
     }
 }
