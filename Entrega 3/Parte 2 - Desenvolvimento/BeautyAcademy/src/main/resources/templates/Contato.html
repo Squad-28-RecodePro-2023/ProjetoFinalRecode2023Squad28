@@ -33,8 +33,8 @@
 </head>
 
 <body>
-		<div class="body-inner">
-	
+	<div class="body-inner">
+
 		<div id="top-bar" class="top-bar">
 			<div class="container">
 				<div class="row">
@@ -46,7 +46,7 @@
 						</ul>
 					</div>
 					<!-- Informação topo final -->
-	
+
 					<div class="col-lg-4 col-md-4 top-social text-center text-md-right">
 						<ul class="list-unstyled">
 							<li>
@@ -80,11 +80,11 @@
 						<div class="row align-items-center">
 							<div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
 								<a class="d-block" href="Home.html">
-									<img loading="lazy" src="images/LogoNova.jpg" alt="Beauty-Academy" style="height: 60px"
-										;>
+									<img loading="lazy" src="images/LogoNova.jpg" alt="Beauty-Academy"
+										style="height: 60px" ;>
 								</a>
 							</div><!-- logo fim -->
-	
+
 							<div class="col-lg-9 header-right">
 								<ul class="top-info-box">
 									<li>
@@ -102,101 +102,26 @@
 												<p class="info-box-subtitle">Beauty@Beauty.com</p>
 											</div>
 										</div>
-									</li> <!-- Botão Cadastre-se -->
+									</li>
+
+									</li> <!-- Botão login -->
 									<li class="header-get-a-quote">
-										<button type="button" class="btn" data-bs-toggle="modal"
-											data-bs-target="#loginModal" style="background-color: #400036; color: white;">
-											Cadastre-se / Login
-										</button><!-- Fim do Botão Cadastre-se -->
-	
-										<!-- Modal de Login -->
-										<div class="modal fade" id="loginModal" tabindex="-1"
-											aria-labelledby="exampleModalLabel" aria-hidden="true">
-											<div class="modal-dialog">
-												<div class="modal-content">
-													<div class="modal-header">
-														<h5 class="modal-title" id="exampleModalLabel"
-															style="color: #400036;">Login</h5>
-														<button type="button" class="btn-close" data-bs-dismiss="modal"
-															aria-label="Close">
-															<span aria-hidden="true">&times;</span>
-														</button>
-													</div>
-													<div class="modal-body">
-														<form>
-															<div class="mb-3">
-																<label for="loginEmail" class="form-label">Email</label>
-																<input type="email" class="form-control" id="loginEmail"
-																	placeholder="Digite seu email">
-															</div>
-															<div class="mb-3">
-																<label for="loginSenha" class="form-label">Senha</label>
-																<input type="password" class="form-control" id="loginSenha"
-																	placeholder="Digite sua senha">
-															</div>
-															<div class="d-flex justify-content-between mb-3">
-																<button type="button" class="btn btn-primary"
-																	style="background-color: #400036; color: white;">Login</button>
-																<button type="button" class="btn btn-secondary"
-																	data-bs-toggle="modal" data-bs-target="#cadastroModal">
-																	Cadastrar
-																</button>
-															</div>
-														</form>
-													</div>
-												</div>
-											</div>
-										</div><!-- Fim do Modal de Login -->
-	
-										<!-- Modal de Cadastro -->
-										<div class="modal fade" id="cadastroModal" tabindex="-1"
-											aria-labelledby="exampleModalLabel" aria-hidden="true">
-											<div class="modal-dialog">
-												<div class="modal-content">
-													<div class="modal-header">
-														<h5 class="modal-title" id="exampleModalLabel"
-															style="color: #400036;">Cadastro</h5>
-														<button type="button" class="btn-close" data-bs-dismiss="modal"
-															aria-label="Close">
-															<span aria-hidden="true">&times;</span>
-														</button>
-													</div>
-													<div class="modal-body">
-														<form>
-															<div class="mb-3">
-																<label for="nome" class="form-label">Nome</label>
-																<input type="text" class="form-control" id="nome"
-																	placeholder="Digite seu nome">
-															</div>
-															<div class="mb-3">
-																<label for="email" class="form-label">E-mail</label>
-																<input type="email" class="form-control" id="email"
-																	placeholder="Digite seu e-mail">
-															</div>
-															<div class="mb-3">
-																<label for="celular" class="form-label">Celular</label>
-																<input type="text" class="form-control" id="celular"
-																	placeholder="Digite seu celular">
-															</div>
-															<div class="mb-3">
-																<label for="senha" class="form-label">Senha</label>
-																<input type="password" class="form-control" id="senha"
-																	placeholder="Digite sua senha">
-															</div>
-															<button type="submit" class="btn btn-primary">Cadastrar</button>
-														</form>
-													</div>
-												</div>
-											</div>
-										</div><!-- fim Modal de Cadastro -->
+										<a href="/login" class="btn"
+											style="background-color: #400036; color: white;">Login</a>
+										<!-- Fim do Botão login -->
+									</li> <!-- Botão login -->
+									<li class="header-get-a-quote">
+										<a href="/logout" class="btn"
+											style="background-color: #400036; color: white;">Logout</a>
+										<!-- Fim do Botão login -->
 								</ul><!-- Ul fim -->
 							</div><!-- header direita fim -->
 						</div><!-- logo area fim -->
-	
+
 					</div><!-- Row fim -->
 				</div><!-- Container fim -->
 			</div>
-	
+
 			<div class="site-navigation" style="display: flex; align-items: center; height: auto;">
 				<div class="container">
 					<div class="row">
@@ -207,43 +132,45 @@
 									aria-label="Toggle navigation">
 									<span class="navbar-toggler-icon"></span>
 								</button>
-	
+
 								<div id="navbar-collapse" class="collapse navbar-collapse">
 									<ul class="nav navbar-nav mr-auto">
 										<li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
-	
+
 										<li class="nav-item"><a href="PCursos.html" class="nav-link">Cursos</a></li>
-	
+
 										<li class="nav-item dropdown">
 											<a href="#" class="nav-link dropdown-toggle"
-												data-toggle="dropdown">institucional <i class="fa fa-angle-down"></i></a>
+												data-toggle="dropdown">institucional <i
+													class="fa fa-angle-down"></i></a>
 											<ul class="dropdown-menu" role="menu">
 												<li><a href="QuemSomos.html">Quem Somos? </a></li>
 												<li><a href="Manifesto.html">Manifesto </a></li>
 											</ul>
 										</li>
-	
+
 										<li class="nav-item dropdown">
 											<a href="#" class="nav-link dropdown-toggle"
-												data-toggle="dropdown">Administração <i class="fa fa-angle-down"></i></a>
+												data-toggle="dropdown">Administração <i
+													class="fa fa-angle-down"></i></a>
 											<ul class="dropdown-menu" role="menu">
 												<li><a href="Aluno.html">Aluno </a></li>
 												<li><a href="Curso.html">Curso</a></li>
 												<li><a href="MatriculaCurso.html">Matricula</a></li>
 											</ul>
 										</li>
-	
+
 										<li class="nav-item"><a class="nav-link" href="Contato.html">Contato</a></li>
 									</ul>
 								</div>
 							</nav>
 						</div><!-- Col final -->
 					</div><!-- Row final -->
-	
+
 					<div class="nav-search" style="background-color: #4036; position: absolute;">
 						<span id="search"><i class="fa fa-search"></i></span>
 					</div><!-- pesquisa final -->
-	
+
 					<div class="search-block" style="display: none; background-color: #4036; border-radius: 50px;">
 						<label for="search-field" class="w-100 mb-0">
 							<input type="text" class="form-control"
@@ -254,7 +181,7 @@
 					</div><!-- final da caixa de pesquisa -->
 				</div>
 				<!-- Container final -->
-	
+
 			</div>
 			<!-- Navigation final -->
 		</header>

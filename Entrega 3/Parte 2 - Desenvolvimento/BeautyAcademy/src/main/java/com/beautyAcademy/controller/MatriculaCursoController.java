@@ -43,7 +43,7 @@ public class MatriculaCursoController {
 	@GetMapping("/obter-ids-cursos")
 	@ResponseBody
 	public List<Integer> obterIdsCursos() {
-		List<Curso> cursos = cursoService.listarTodosCursos(); // Substitua pelo método correto do seu serviço
+		List<Curso> cursos = cursoService.listarTodosCursos();
 		List<Integer> idsCursos = cursos.stream().map(curso -> curso.getIdCurso()).collect(Collectors.toList());
 		return idsCursos;
 	}

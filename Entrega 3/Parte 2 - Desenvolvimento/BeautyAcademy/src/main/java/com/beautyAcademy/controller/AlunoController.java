@@ -1,11 +1,13 @@
 package com.beautyAcademy.controller;
 
 import com.beautyAcademy.entities.Aluno;
+import com.beautyAcademy.entities.Cargo;
 import com.beautyAcademy.services.AlunoService;
+import com.beautyAcademy.services.CargoService;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,12 +15,23 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class AlunoController {
 
 	private final AlunoService alunoService;
+
+	@Autowired
+	private CargoService cargoService; // Certifique-se de ter um serviço para cargos
+
+	@GetMapping("/obter-cargos")
+	@ResponseBody
+	public List<Cargo> obterCargos() {
+		return cargoService.getAllCargos();
+	}
 
 	@Autowired
 	public AlunoController(AlunoService alunoService) {
@@ -28,7 +41,9 @@ public class AlunoController {
 	@GetMapping("/Aluno.html")
 	public String aluno(Model model) {
 		List<Aluno> alunos = alunoService.listarTodosAlunos();
+		List<Cargo> cargos = cargoService.getAllCargos();
 		model.addAttribute("alunos", alunos);
+		model.addAttribute("cargos", cargos);
 		return "Aluno.html";
 	}
 
@@ -50,5 +65,5 @@ public class AlunoController {
 	public Aluno obterAlunoParaEdicao(@PathVariable int matricula) {
 		return alunoService.buscarPorMatricula(matricula).orElseThrow();
 	}
-	
+
 }

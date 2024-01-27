@@ -5,4 +5,6 @@ import com.beautyAcademy.entities.Aluno;
 
 public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
 
+	Aluno findByEmail(String email);
+
 }

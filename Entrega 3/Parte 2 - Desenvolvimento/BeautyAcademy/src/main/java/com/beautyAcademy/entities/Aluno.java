@@ -4,9 +4,12 @@ import java.util.Objects;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Aluno {
@@ -27,17 +30,21 @@ public class Aluno {
 	
 	@Column(nullable = false)
 	private long celular;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "idCargo", nullable = false)
+	private Cargo cargo;
 
 	public Aluno() {
 	}
 
-	public Aluno(int matricula, String email, String senha, String nome, long celular) {
-		super();
+	public Aluno(int matricula, String email, String senha, String nome, long celular, Cargo cargo) {
 		this.matricula = matricula;
 		this.email = email;
 		this.senha = senha;
 		this.nome = nome;
 		this.celular = celular;
+		this.cargo = cargo;
 	}
 
 	public int getMatricula() {
@@ -78,6 +85,14 @@ public class Aluno {
 
 	public void setCelular(long celular) {
 		this.celular = celular;
+	}
+	
+	public Cargo getCargo() {
+		return cargo;
+	}
+
+	public void setCargo(Cargo cargo) {
+		this.cargo = cargo;
 	}
 
 	@Override
