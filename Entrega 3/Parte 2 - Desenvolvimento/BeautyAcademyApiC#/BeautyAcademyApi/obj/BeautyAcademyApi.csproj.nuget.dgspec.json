@@ -1,0 +1,122 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Entrega-03-Squad\\ProjetoFinalRecode2023Squad28\\Entrega 3\\Parte 2 - Desenvolvimento\\BeautyAcademyApiC#\\BeautyAcademyApi\\BeautyAcademyApi.csproj": {}
+  },
+  "projects": {
+    "D:\\Entrega-03-Squad\\ProjetoFinalRecode2023Squad28\\Entrega 3\\Parte 2 - Desenvolvimento\\BeautyAcademyApiC#\\BeautyAcademyApi\\BeautyAcademyApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Entrega-03-Squad\\ProjetoFinalRecode2023Squad28\\Entrega 3\\Parte 2 - Desenvolvimento\\BeautyAcademyApiC#\\BeautyAcademyApi\\BeautyAcademyApi.csproj",
+        "projectName": "BeautyAcademyApi",
+        "projectPath": "D:\\Entrega-03-Squad\\ProjetoFinalRecode2023Squad28\\Entrega 3\\Parte 2 - Desenvolvimento\\BeautyAcademyApiC#\\BeautyAcademyApi\\BeautyAcademyApi.csproj",
+        "packagesPath": "C:\\Users\\Pc-CaioBarbara\\.nuget\\packages\\",
+        "outputPath": "D:\\Entrega-03-Squad\\ProjetoFinalRecode2023Squad28\\Entrega 3\\Parte 2 - Desenvolvimento\\BeautyAcademyApiC#\\BeautyAcademyApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Pc-CaioBarbara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.26, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.26, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.26, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.26, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.26, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.25, 6.0.25]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
