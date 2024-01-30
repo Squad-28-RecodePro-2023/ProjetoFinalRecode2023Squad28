@@ -20,40 +20,45 @@ import enums.Perfil;
 @EnableWebSecurity
 public class SecurityConfig {
 
-	@Autowired
-	private UserDetailsServiceImpl userDetailsServiceImpl;
+    @Autowired
+    private UserDetailsServiceImpl userDetailsServiceImpl;
 
-	@Bean
-	public PasswordEncoder passwordEncoder() {
-		return new BCryptPasswordEncoder();
-	}
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 
-	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.userDetailsService(userDetailsServiceImpl).passwordEncoder(passwordEncoder());
-	}
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailsServiceImpl).passwordEncoder(passwordEncoder());
+    }
 
-	@Bean
-	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-		return http.authorizeHttpRequests(authorizeConfig -> {
-			authorizeConfig.requestMatchers("/", "/Home.html", "/QuemSomos.html", "/Manifesto.html", "/Contato.html",
-					"/logout", "/css/**", "/js/**", "/images/**", "/plugins/**").permitAll();
-			authorizeConfig.requestMatchers(HttpMethod.DELETE, "/excluir-aluno/{matricula}", "/excluir-curso/{idCurso}",
-					"/excluirmatriculacurso/{idMatriculaCurso}").hasAuthority(Perfil.ADMIN.toString());
-			authorizeConfig.requestMatchers(HttpMethod.POST, "/cadastrar-aluno", "/cadastrar-curso",
-					"/cadastrar-matriculacurso").hasAuthority(Perfil.ADMIN.toString());
-			authorizeConfig.requestMatchers(HttpMethod.GET, "/Aluno.html", "/editar-aluno/{matricula}", "/Curso.html",
-					"/editar-curso/{idCurso}", "/obter-matriculas-aluno", "/obter-ids-cursos",
-					"/MatriculaCurso.html", "/editar-matriculacurso/{idMatriculaCurso}", "/obter-matriculas-cursos")
-					.hasAuthority(Perfil.ADMIN.toString());
-			authorizeConfig.requestMatchers(HttpMethod.GET, "/PCursos.html", "/{idCurso}")
-					.hasAnyAuthority(Perfil.USER.toString(), Perfil.ADMIN.toString());
-			authorizeConfig.anyRequest().authenticated();
-		}).formLogin(Customizer.withDefaults())
-				.logout(logout -> logout
-			            .logoutUrl("/logout")
-			            .logoutSuccessUrl("/") // Redireciona para a página inicial após o logout
-			        )
-				.build();
+    @Bean
+    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        return http.authorizeHttpRequests(authorizeConfig -> {
+            authorizeConfig.requestMatchers("/", "/Home.html", "/QuemSomos.html", "/AcessoNegado.html", "/Erro.html", "/Manifesto.html", "/Contato.html",
+                    "/logout", "/css/**", "/js/**", "/images/**", "/plugins/**").permitAll();
+            authorizeConfig.requestMatchers(HttpMethod.DELETE, "/excluir-aluno/{matricula}", "/excluir-curso/{idCurso}",
+                    "/excluirmatriculacurso/{idMatriculaCurso}").hasAuthority(Perfil.ADMIN.toString());
+            authorizeConfig.requestMatchers(HttpMethod.POST, "/cadastrar-aluno", "/cadastrar-curso",
+                    "/cadastrar-matriculacurso").hasAuthority(Perfil.ADMIN.toString());
+            authorizeConfig.requestMatchers(HttpMethod.GET, "/Aluno.html", "/editar-aluno/{matricula}", "/Curso.html",
+                    "/editar-curso/{idCurso}", "/obter-matriculas-aluno", "/obter-ids-cursos",
+                    "/MatriculaCurso.html", "/editar-matriculacurso/{idMatriculaCurso}", "/obter-matriculas-cursos")
+                    .hasAuthority(Perfil.ADMIN.toString());
+            authorizeConfig.requestMatchers(HttpMethod.GET, "/PCursos.html", "/{idCurso}")
+                    .hasAnyAuthority(Perfil.USER.toString(), Perfil.ADMIN.toString());
+            authorizeConfig.anyRequest().authenticated();
+        }).formLogin(Customizer.withDefaults())
+                .logout(logout -> logout
+                        .logoutUrl("/logout")
+                        .logoutSuccessUrl("/") // Redireciona para a página inicial após o logout
+                )
+                .exceptionHandling(exceptionHandling -> exceptionHandling
+                        .accessDeniedHandler((request, response, accessDeniedException) -> {
+                            response.sendRedirect("/AcessoNegado.html");
+                        })
+                )
 
-	}
+                .build();
+    }
 }
